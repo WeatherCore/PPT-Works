@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>参考来源速查表 · 从 DRAM 到 HBM</title>
+  <style>
+    body {
+      font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+      margin: 0;
+      background: #f4f7fa;
+      color: #223140;
+    }
+
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 28px 32px 60px;
+    }
+
+    h1 {
+      color: #0A3055;
+      font-size: 26px;
+      border-bottom: 3px solid #0A95AD;
+      padding-bottom: 10px;
+    }
+
+    .meta {
+      color: #5a6e80;
+      font-size: 13.5px;
+      line-height: 1.7;
+      background: #fff;
+      border-left: 4px solid #0A95AD;
+      padding: 10px 14px;
+      margin: 14px 0 22px;
+    }
+
+    h2 {
+      color: #0A3055;
+      font-size: 19px;
+      margin: 30px 0 10px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background: #fff;
+      font-size: 13.5px;
+      box-shadow: 0 1px 3px rgba(10, 48, 85, .12);
+    }
+
+    th {
+      background: #0A3055;
+      color: #fff;
+      padding: 8px 10px;
+      text-align: left;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    td {
+      border: 1px solid #dde5ec;
+      padding: 8px 10px;
+      vertical-align: top;
+      line-height: 1.55;
+    }
+
+    tr:nth-child(even) td {
+      background: #f7fafc;
+    }
+
+    .id {
+      font-family: Consolas, monospace;
+      font-weight: bold;
+      color: #0A95AD;
+      white-space: nowrap;
+    }
+
+    a {
+      color: #0A95AD;
+      word-break: break-all;
+    }
+
+    a:hover {
+      color: #D97706;
+    }
+
+    .kind {
+      display: inline-block;
+      font-size: 11.5px;
+      padding: 1px 7px;
+      border-radius: 9px;
+      white-space: nowrap;
+    }
+
+    .k-official {
+      background: #e2f3f6;
+      color: #077387;
+      border: 1px solid #9fd2dc;
+    }
+
+    .k-std {
+      background: #e8eef7;
+      color: #0A3055;
+      border: 1px solid #b9c9de;
+    }
+
+    .k-third {
+      background: #fdf0e0;
+      color: #9a5b06;
+      border: 1px solid #ecd0a4;
+    }
+
+    .k-media {
+      background: #f0f0f0;
+      color: #555;
+      border: 1px solid #d5d5d5;
+    }
+
+    .k-acad {
+      background: #eaf6ea;
+      color: #2f6b2f;
+      border: 1px solid #bfe0bf;
+    }
+
+    .warn {
+      background: #fff8ee;
+      border: 1px solid #ecd0a4;
+      padding: 10px 14px;
+      font-size: 13.5px;
+      line-height: 1.7;
+      margin: 18px 0;
+    }
+
+    .toc a {
+      margin-right: 14px;
+      text-decoration: none;
+    }
+
+    .tip {
+      font-size: 13px;
+      color: #5a6e80;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>参考来源速查表</h1>
+    <div class="meta">
+      配套 PPT：《从 DRAM 到 HBM：国内外主流存储器技术路线与国产进展》（正文引用编号 [1]–[31] 与本表一致）。<br>
+      全部来源访问日期：<b>2026-10-11</b>。<b>使用方法</b>：老师问到某个数字 → Ctrl+F 搜索该数字 → 找到编号 → 点击链接现场打开 → 按"打开看点"一栏指出数据位置。
+    </div>
+
+    <div class="toc"><b>按 PPT 页码快速定位：</b>
+      <a href="#g1">P05 标准 [1]–[7]</a>
+      <a href="#g2">P06/P07 国际厂商 [8]–[14]</a>
+      <a href="#g3">P08 国产三家企业 [15]–[22]</a>
+      <a href="#g4">P10 在研案例 [23]–[24]</a>
+      <a href="#g5">P09 新型存储 [25]–[28]</a>
+      <a href="#g6">P07 趋势分析 [29]–[31]</a>
+    </div>
+
+    <h2 id="g1">一、JEDEC 标准（P02–P05 的速率与口径依据）</h2>
+    <table>
+      <tr>
+        <th>编号</th>
+        <th>来源</th>
+        <th>性质</th>
+        <th>时间</th>
+        <th>链接（点击打开）</th>
+        <th>支撑内容 / 打开看点</th>
+      </tr>
+      <tr>
+        <td class="id">[1]</td>
+        <td>JEDEC 发布 DDR5 标准（JESD79-5）</td>
+        <td><span class="kind k-std">标准组织</span></td>
+        <td>2020-07</td>
+        <td><a
+            href="https://www.jedec.org/news/pressreleases/jedec-publishes-new-ddr5-standard-advancing-next-generation-high-performance"
+            target="_blank">jedec.org/news/pressreleases/jedec-publishes-new-ddr5-standard…</a></td>
+        <td>P05 卡片"4800 MT/s 起始"。看点：新闻稿正文写明起始速率 4800 MT/s。</td>
+      </tr>
+      <tr>
+        <td class="id">[2]</td>
+        <td>JEDEC LPDDR 技术专页（JESD209-5B/5C）</td>
+        <td><span class="kind k-std">标准组织</span></td>
+        <td>2021 / 2023</td>
+        <td><a href="https://www.jedec.org/category/technology-focus-area"
+            target="_blank">jedec.org/category/technology-focus-area</a></td>
+        <td>P05 卡片"8533 → 9600 MT/s"。看点：LPDDR 专页列 JESD209-5C（2023-07，上限 9600 MT/s）。</td>
+      </tr>
+      <tr>
+        <td class="id">[3]</td>
+        <td>JEDEC 新闻索引（LPDDR6 标准 JESD209-6）</td>
+        <td><span class="kind k-std">标准组织</span></td>
+        <td>2025-07</td>
+        <td><a href="https://www.jedec.org/news/pressreleases" target="_blank">jedec.org/news/pressreleases</a></td>
+        <td>P08 长鑫 LPDDR6 行的"JEDEC 已发布 LPDDR6 标准"。看点：新闻列表中 2025 年 7 月 LPDDR6 发布条目。</td>
+      </tr>
+      <tr>
+        <td class="id">[4]</td>
+        <td>JEDEC 发布 HBM3 标准（JESD238）</td>
+        <td><span class="kind k-std">标准组织</span></td>
+        <td>2022-01</td>
+        <td><a
+            href="https://www.jedec.org/news/pressreleases/jedec-publishes-hbm3-update-high-bandwidth-memory-hbm-standard"
+            target="_blank">jedec.org/news/pressreleases/jedec-publishes-hbm3-update…</a></td>
+        <td>P05 "HBM3 约 819 GB/s/堆叠"。看点：新闻稿写明 6.4 Gb/s/引脚、16 通道。</td>
+      </tr>
+      <tr>
+        <td class="id">[5]</td>
+        <td>JEDEC HBM3/HBM3E 文档页（JESD238B.01）</td>
+        <td><span class="kind k-std">标准组织</span></td>
+        <td>2025-04</td>
+        <td><a href="https://www.jedec.org/standards-documents/docs/jesd238b01"
+            target="_blank">jedec.org/standards-documents/docs/jesd238b01</a></td>
+        <td>P05 "HBM3E 上限 9.6 Gb/s（约 1.2 TB/s/堆叠）"。看点：文档页标注 2025 年 4 月版本。</td>
+      </tr>
+      <tr>
+        <td class="id">[6]</td>
+        <td>JEDEC HBM4 标准（JESD270-4）新闻</td>
+        <td><span class="kind k-std">标准组织</span></td>
+        <td>2025-04</td>
+        <td><a href="https://www.jedec.org/news/pressreleases" target="_blank">jedec.org/news/pressreleases</a></td>
+        <td>P05 "HBM4 约 2 TB/s/堆叠"、P07 "JEDEC 8 Gb/s 中性锚点"。看点：2025 年 4 月 JESD270-4 发布条目（2048-bit、8 Gb/s/引脚）。</td>
+      </tr>
+      <tr>
+        <td class="id">[7]</td>
+        <td>SK hynix Newsroom：HBM 技术文章</td>
+        <td><span class="kind k-official">厂商官方</span></td>
+        <td>长期栏目</td>
+        <td><a href="https://news.skhynix.com/en/become-a-semiconductor-expert-with-sk-hynix-hbm/"
+            target="_blank">news.skhynix.com/en/become-a-semiconductor-expert-with-sk-hynix-hbm/</a></td>
+        <td>P05 结构图"普通 DRAM 8 个 DQ / DIMM 64-bit / HBM 1024 DQ / 占板面积小 10 倍"。看点：文中 HBM 原理图解与 DQ 对比。</td>
+      </tr>
+    </table>
+
+    <h2 id="g2">二、国际三大厂商（P06/P07 的量产状态与参数）</h2>
+    <table>
+      <tr>
+        <th>编号</th>
+        <th>来源</th>
+        <th>性质</th>
+        <th>时间</th>
+        <th>链接（点击打开）</th>
+        <th>支撑内容 / 打开看点</th>
+      </tr>
+      <tr>
+        <td class="id">[8]</td>
+        <td>SK hynix：全球首个完成 HBM4 开发</td>
+        <td><span class="kind k-official">厂商官方</span></td>
+        <td>2025-09-12</td>
+        <td><a
+            href="https://news.skhynix.com/en/sk-hynix-completes-worlds-first-hbm4-development-and-readies-mass-production/"
+            target="_blank">news.skhynix.com/en/sk-hynix-completes-worlds-first-hbm4-development…</a></td>
+        <td>P07 "开发完成+量产就绪、超 10 Gbps、能效 +40%"。看点：公告原文措辞是"完成开发并就绪量产"（未称已交付）。</td>
+      </tr>
+      <tr>
+        <td class="id">[9]</td>
+        <td>Micron：HBM3E / HBM4 产品页</td>
+        <td><span class="kind k-official">厂商官方</span></td>
+        <td>2026（页面现行）</td>
+        <td><a href="https://www.micron.com/products/memory/hbm/hbm4"
+            target="_blank">micron.com/products/memory/hbm/hbm4</a>　<a
+            href="https://www.micron.com/products/memory/hbm/hbm3e" target="_blank">…/hbm3e</a></td>
+        <td>P07 "36GB 12 层 2026 量产、超 11 Gbps、1β"。看点：HBM4 页参数表与时间线（含 2026-03-16 配合 Vera Rubin）。</td>
+      </tr>
+      <tr>
+        <td class="id">[10]</td>
+        <td>Samsung：率先商业出货 HBM4</td>
+        <td><span class="kind k-official">厂商官方</span></td>
+        <td>2026-02-12</td>
+        <td><a
+            href="https://news.samsung.com/global/samsung-ships-industry-first-commercial-hbm4-with-ultimate-performance-for-ai-computing"
+            target="_blank">news.samsung.com/global/samsung-ships-industry-first-commercial-hbm4…</a></td>
+        <td>P07 "11.7 Gbps、最高 3.3 TB/s/堆叠、1c 工艺"；P07 趋势卡"HBM4E 2026 下半年送样、定制 HBM 2027"。看点：新闻稿正文全部参数。</td>
+      </tr>
+      <tr>
+        <td class="id">[11]</td>
+        <td>Samsung：第 9 代 V-NAND 量产</td>
+        <td><span class="kind k-official">厂商官方</span></td>
+        <td>2024-04-22</td>
+        <td><a
+            href="https://news.samsung.com/global/samsung-electronics-begins-industrys-first-mass-production-of-9th-generation-v-nand"
+            target="_blank">news.samsung.com/global/samsung-electronics-begins-industrys-first…v-nand</a></td>
+        <td>P07 NAND 列"第 9 代 V-NAND 量产"。看点：公告日期与 Toggle 5.1 接口描述（层数为媒体口径，公告未列）。</td>
+      </tr>
+      <tr>
+        <td class="id">[12]</td>
+        <td>SK hynix：321 层 NAND 展示与量产</td>
+        <td><span class="kind k-official">厂商官方</span></td>
+        <td>2023–2025</td>
+        <td><a href="https://news.skhynix.com/en/sk-hynix-showcases-samples-of-worlds-first-321-layer-nand/"
+            target="_blank">…showcases-samples-of-worlds-first-321-layer-nand/</a>　<a
+            href="https://news.skhynix.com/en/sk-hynix-begins-mass-production-of-321-layer-qlc-nand-flash/"
+            target="_blank">…begins-mass-production-of-321-layer-qlc-nand-flash/</a></td>
+        <td>P06 "业界量产 300+ 层"、P07 NAND 列。看点：QLC 公告中"2Tb 裸片、每单元 4 比特"。</td>
+      </tr>
+      <tr>
+        <td class="id">[13]</td>
+        <td>Micron：G9 NAND 量产</td>
+        <td><span class="kind k-official">厂商官方</span></td>
+        <td>2024-07-30</td>
+        <td><a href="https://investors.micron.com/news-releases" target="_blank">investors.micron.com/news-releases</a>
+        </td>
+        <td>P07 NAND 列"G9 量产、接口 3.6 GB/s"。看点：新闻索引中 2024-07-30 G9 条目。</td>
+      </tr>
+      <tr>
+        <td class="id">[14]</td>
+        <td>Kioxia：第 10 代 BiCS FLASH 送样</td>
+        <td><span class="kind k-official">厂商官方</span></td>
+        <td>2026-07-03</td>
+        <td><a href="https://www.kioxia.com/en-jp/about/news/2026/20260703-1.html"
+            target="_blank">kioxia.com/en-jp/about/news/2026/20260703-1.html</a></td>
+        <td>P06 "CBA 架构、332 层送样"。看点：公告中 CBA（CMOS directly Bonded to Array）描述——与 Xtacking 同思路。</td>
+      </tr>
+    </table>
+
+    <h2 id="g3">三、国产三家企业（P08 产品图谱的官方口径）</h2>
+    <table>
+      <tr>
+        <th>编号</th>
+        <th>来源</th>
+        <th>性质</th>
+        <th>时间</th>
+        <th>链接（点击打开）</th>
+        <th>支撑内容 / 打开看点</th>
+      </tr>
+      <tr>
+        <td class="id">[15]</td>
+        <td>长江存储：Xtacking 技术介绍</td>
+        <td><span class="kind k-official">厂商官方</span></td>
+        <td>官网现行</td>
+        <td><a href="https://www.ymtc.com/cn/technicalintroduction.html"
+            target="_blank">ymtc.com/cn/technicalintroduction.html</a></td>
+        <td>P06 Xtacking 原理与"面积约省 25%（企业口径）"。看点：双晶圆键合示意与官方数据（含外围电路传统占 20–30%）。</td>
+      </tr>
+      <tr>
+        <td class="id">[16]</td>
+        <td>长江存储：企业介绍与产品时间线</td>
+        <td><span class="kind k-official">厂商官方</span></td>
+        <td>官网现行</td>
+        <td><a href="https://www.ymtc.com/cn/intro.html" target="_blank">ymtc.com/cn/intro.html</a></td>
+        <td>P08 长江行全部代际（2017 流片→2019/2021/2022/2024 量产、2025 QLC 发布）、IDM 定位。看点：官网发展历程页。</td>
+      </tr>
+      <tr>
+        <td class="id">[17]</td>
+        <td>TechInsights：YMTC Xtacking 4.0 拆解分析</td>
+        <td><span class="kind k-third">第三方机构</span></td>
+        <td>2025-01（经媒体转载）</td>
+        <td><a href="https://www.techinsights.com/blog" target="_blank">techinsights.com/blog</a></td>
+        <td>P08 "第五代总堆叠 294 层"。看点：完整报告需订阅，公开可见为博客索引；引用时说明"第三方拆解口径、官网未公布层数"。</td>
+      </tr>
+      <tr>
+        <td class="id">[18]</td>
+        <td>长鑫存储：产品与服务</td>
+        <td><span class="kind k-official">厂商官方</span></td>
+        <td>官网现行</td>
+        <td><a href="https://www.cxmt.com/product.html" target="_blank">cxmt.com/product.html</a></td>
+        <td>P08 长鑫行"DDR5 8000 Mbps、LPDDR5X 10667 Mbps、LPDDR6 12800 Mbps（已列产品页）"。看点：各产品页的速率与容量参数（注意其单位写法 Mbps）。</td>
+      </tr>
+      <tr>
+        <td class="id">[19]</td>
+        <td>长鑫存储：第五代 DRAM 技术平台量产公告</td>
+        <td><span class="kind k-official">厂商官方</span></td>
+        <td>2026-09-20</td>
+        <td><a href="https://www.cxmt.com/news/info_97.html" target="_blank">cxmt.com/news/info_97.html</a></td>
+        <td>P08 "G5 平台量产、半间距 11.95 nm、LPDDR5X 24Gb 量产"。看点：公告注明参数为产品实测值（企业口径）。</td>
+      </tr>
+      <tr>
+        <td class="id">[20]</td>
+        <td>新浪财经：长鑫 LPDDR6 研发验证报道</td>
+        <td><span class="kind k-media">媒体</span></td>
+        <td>2026-08-01</td>
+        <td><a href="https://finance.sina.com.cn" target="_blank">finance.sina.com.cn</a>（站内搜索"长鑫 LPDDR6"）</td>
+        <td>P08 "LPDDR6 送样验证收尾、目标 2026 下半年量产导入"。看点：产业链消息，引用时强调"媒体报道、非官方宣布"。</td>
+      </tr>
+      <tr>
+        <td class="id">[21]</td>
+        <td>兆易创新：Flash 产品页</td>
+        <td><span class="kind k-official">厂商官方</span></td>
+        <td>官网现行</td>
+        <td><a href="https://www.gigadevice.com.cn/product/flash" target="_blank">gigadevice.com.cn/product/flash</a>
+        </td>
+        <td>P08 兆易行"GD25/GD55 512Kb–2Gb、GD5F 1–16Gb、车规认证"。看点：各系列规格与车规标识。</td>
+      </tr>
+      <tr>
+        <td class="id">[22]</td>
+        <td>兆易创新年报转引 Web-Feet / 沙利文市占率</td>
+        <td><span class="kind k-third">第三方（企业转引）</span></td>
+        <td>2024 年报</td>
+        <td><a href="https://www.gigadevice.com.cn" target="_blank">gigadevice.com.cn</a>（投资者关系→年报）</td>
+        <td>P08 "SPI NOR 全球市占率约 20.4%、第二"。看点：年报摘要引用 Web-Feet Research 数据；引用时说"转引口径"。</td>
+      </tr>
+    </table>
+
+    <h2 id="g4">四、中国在研案例（P10）</h2>
+    <table>
+      <tr>
+        <th>编号</th>
+        <th>来源</th>
+        <th>性质</th>
+        <th>时间</th>
+        <th>链接（点击打开）</th>
+        <th>支撑内容 / 打开看点</th>
+      </tr>
+      <tr>
+        <td class="id">[23]</td>
+        <td>哈尔滨工程大学学术动态（转载中科院微电子所成果）</td>
+        <td><span class="kind k-acad">高校/科研</span></td>
+        <td>2025-08-25</td>
+        <td><a href="https://www.hr.edu.cn/xueshu/xueshudt/202508/t20250825_2686542.shtml"
+            target="_blank">hr.edu.cn/xueshu/xueshudt/202508/t20250825_2686542.shtml</a></td>
+        <td>P10 案例：16 核近阈值 RRAM 存算一体、2T1R、失配抵消、电荷域计算。看点：转载正文对问题与思路的完整描述。</td>
+      </tr>
+      <tr>
+        <td class="id">[24]</td>
+        <td>清华大学集成电路学院：忆阻器存算一体成果（含《Science》论文）</td>
+        <td><span class="kind k-acad">高校/科研</span></td>
+        <td>2023-09（页现行）</td>
+        <td><a href="https://www.sic.tsinghua.edu.cn/info/1060/1829.htm"
+            target="_blank">sic.tsinghua.edu.cn/info/1060/1829.htm</a></td>
+        <td>P10 备选案例（Science 2023、片上学习功耗 1/35 校方口径）+ P10 验证数据（2.4%、55–89 TOPS/W，与 [23] 同源转载）。看点：入选"中国半导体十大研究进展"的官方表述。
+        </td>
+      </tr>
+    </table>
+
+    <h2 id="g5">五、新型存储（P09）</h2>
+    <table>
+      <tr>
+        <th>编号</th>
+        <th>来源</th>
+        <th>性质</th>
+        <th>时间</th>
+        <th>链接（点击打开）</th>
+        <th>支撑内容 / 打开看点</th>
+      </tr>
+      <tr>
+        <td class="id">[25]</td>
+        <td>Everspin：公司与新闻稿（MRAM 量产 / 车规）</td>
+        <td><span class="kind k-official">厂商官方</span></td>
+        <td>2006 起现行</td>
+        <td><a href="https://www.everspin.com" target="_blank">everspin.com</a>　<a href="https://investor.everspin.com"
+            target="_blank">investor.everspin.com</a></td>
+        <td>P09 "MRAM 最成熟、2006 年起量产、车规 AEC-Q100 G1"。看点：产品页 Toggle/STT-MRAM 系列、新闻稿车规认证条目。</td>
+      </tr>
+      <tr>
+        <td class="id">[26]</td>
+        <td>Samsung：车规工艺战略（eMRAM）</td>
+        <td><span class="kind k-official">厂商官方</span></td>
+        <td>2023-10-19</td>
+        <td><a href="https://news.samsung.com/global/samsung-electronics-unveils-automotive-process-strategy"
+            target="_blank">news.samsung.com/global/samsung-electronics-unveils-automotive-process-strategy</a></td>
+        <td>P09 "三星 eMRAM 从 28nm 向更先进节点扩展"。看点：新闻稿工艺路线图（14nm/8nm/5nm 计划）。</td>
+      </tr>
+      <tr>
+        <td class="id">[27]</td>
+        <td>Intel：2022 年 Q2 财报（Optane 业务关停声明）</td>
+        <td><span class="kind k-official">厂商官方</span></td>
+        <td>2022-07-28</td>
+        <td><a href="https://www.intc.com/news-events/press-releases"
+            target="_blank">intc.com/news-events/press-releases</a>（检索 2022 Q2）</td>
+        <td>P09 "曾量产、已退场"。看点：财报原文"we initiated the winding down of our Intel Optane memory business"。</td>
+      </tr>
+      <tr>
+        <td class="id">[28]</td>
+        <td>Weebit Nano：ReRAM 量产资格认证</td>
+        <td><span class="kind k-official">厂商官方</span></td>
+        <td>2022–2024 多项</td>
+        <td><a href="https://www.weebit-nano.com/press_release" target="_blank">weebit-nano.com/press_release</a></td>
+        <td>P09 "RRAM 嵌入式 IP 早期导入、SkyWater 130nm 量产资格"。看点：新闻稿列表中 SkyWater/DB HiTek/onsemi 合作条目。</td>
+      </tr>
+    </table>
+
+    <h2 id="g6">六、产业与技术趋势分析（P06/P07）</h2>
+    <table>
+      <tr>
+        <th>编号</th>
+        <th>来源</th>
+        <th>性质</th>
+        <th>时间</th>
+        <th>链接（点击打开）</th>
+        <th>支撑内容 / 打开看点</th>
+      </tr>
+      <tr>
+        <td class="id">[29]</td>
+        <td>TrendForce：混合键合时间表 / Hot Chips 2026</td>
+        <td><span class="kind k-third">第三方机构</span></td>
+        <td>2026-07 / 2026-08</td>
+        <td><a
+            href="https://www.trendforce.com/news/2026/07/07/news-samsung-sk-hynix-reportedly-reconsider-hybrid-bonding-timeline-16-high-hbm4e-may-be-earliest-adoption"
+            target="_blank">trendforce.com/news/2026/07/07/…hybrid-bonding…</a>　<a
+            href="https://www.trendforce.com/news/2026/08/24/news-hot-chips-2026-samsungs-zhbm-claims-70-power-efficiency-gain-sk-hynix-evaluates-intel-emib"
+            target="_blank">…/2026/08/24/…hot-chips-2026…</a></td>
+        <td>P07 趋势卡"混合键合或先用于 16 层 HBM4E"。看点：TrendForce 分析正文。</td>
+      </tr>
+      <tr>
+        <td class="id">[30]</td>
+        <td>Tom's Hardware：三星 3D DRAM 计划</td>
+        <td><span class="kind k-media">媒体</span></td>
+        <td>2024–2025</td>
+        <td><a
+            href="https://www.tomshardware.com/pc-components/dram/samsung-outlines-plans-for-3d-dram-which-will-come-in-the-second-half-of-the-decade"
+            target="_blank">tomshardware.com/…/samsung-outlines-plans-for-3d-dram…</a></td>
+        <td>P07 趋势卡"3D DRAM 在本十年后半段"。看点：转引三星公开表态。</td>
+      </tr>
+      <tr>
+        <td class="id">[31]</td>
+        <td>Chosun Biz：4F² DRAM 进展</td>
+        <td><span class="kind k-media">媒体</span></td>
+        <td>2025-06-18</td>
+        <td><a href="https://biz.chosun.com/en/en-it/2025/06/18/CB2O5LTSDZBZRL3BUTXE2GNZXI/"
+            target="_blank">biz.chosun.com/en/en-it/2025/06/18/CB2O5LTSDZBZRL3BUTXE2GNZXI/</a></td>
+        <td>P07 趋势卡"4F² 单元过渡"。看点：三星 VCT / SK 海力士 VG 的对比报道。</td>
+      </tr>
+    </table>
+
+    <div class="warn">
+      <b>诚实说明：</b><br>
+      ① [17] TechInsights 完整报告需付费订阅，公开可见的是其博客索引，"294 层"经 Tom's Hardware / TechPowerUp 等媒体转载交叉确认，引用时已注明"第三方拆解口径"。<br>
+      ② [20] 新浪财经为站内检索入口链接（原报道页时效性不确定），引用时已注明"产业链消息、非官方宣布"。<br>
+      ③ JEDEC 官网首页偶有访问限制（403），因此 [3][6] 使用其官方新闻索引页替代，标准文档页 [5] 可正常打开。<br>
+      ④ 企业官网数字（[15][18][19][21]）均为<b>企业公开口径</b>，PPT 与讲稿中已逐条注明，未将其表述为独立第三方评测。
+    </div>
+
+    <p class="tip">提示：演示前在浏览器提前打开 3–4 个最可能被问的标签页（建议 [19] 长鑫 G5 公告、[8] SK hynix HBM4、[10] 三星 HBM4、[15]
+      Xtacking），被问到时切标签页即可，避免现场等网页加载。</p>
+  </div>
+</body>
+
+</html>
